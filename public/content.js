@@ -1,7 +1,6 @@
 document.addEventListener('copy', (event) => {
   let text = window.getSelection().toString();
 
-  console.log(text);
   // clipboardData에서 가져오기 (키보드 복사도 대응)
   if (event.clipboardData && event.clipboardData.getData('text')) {
     text = event.clipboardData.getData('text');
