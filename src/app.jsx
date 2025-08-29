@@ -63,7 +63,7 @@ export default function App() {
       style={{ maxHeight: '300px', overflowY: 'auto', padding: '8px' }}
     >
       <StatusTab />
-      <InputSearch value={value} onChange={setValue} />
+      <InputSearch value={value} setValue={setValue} />
       <ul>
         {filteredList.map((item, idx) => (
           <li
