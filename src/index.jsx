@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import App from './app.jsx';
 import { Global, css } from '@emotion/react';
 import { ChakraProvider } from '@chakra-ui/react';
+import { GlobalContextProvider } from './context/global-context';
+import { ThemeToggleButton } from './component/theme-toggle-button/theme-toggle-button';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -19,8 +21,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         }
       `}
     />
-    <ChakraProvider>
-      <App />
-    </ChakraProvider>
+    <GlobalContextProvider>
+      <ChakraProvider>
+        <App />
+        <ThemeToggleButton />
+      </ChakraProvider>
+    </GlobalContextProvider>
   </React.StrictMode>
 );

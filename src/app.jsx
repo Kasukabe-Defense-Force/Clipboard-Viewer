@@ -1,10 +1,11 @@
 import { useEffect, useState, useMemo } from 'react';
 import styled from '@emotion/styled';
 import { InputSearch } from './component/input-search/input-search';
+import { StatusTab } from './component/status-tab/status-tab';
 
 const Container = styled.div`
-  width: 500px;
-  min-height: 500px;
+  width: 400px;
+  min-height: 400px;
 `;
 
 export default function App() {
@@ -61,8 +62,8 @@ export default function App() {
     <Container
       style={{ maxHeight: '300px', overflowY: 'auto', padding: '8px' }}
     >
-      <h3>최근 복사 내용</h3>
-      <InputSearch />
+      <StatusTab />
+      <InputSearch value={value} setValue={setValue} />
       <ul>
         {filteredList.map((item, idx) => (
           <li
