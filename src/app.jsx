@@ -62,7 +62,7 @@ export default function App() {
       style={{ maxHeight: '300px', overflowY: 'auto', padding: '8px' }}
     >
       <h3>최근 복사 내용</h3>
-      <InputSearch value={value} setValue={setValue} />
+      <InputSearch />
       <ul>
         {filteredList.map((item, idx) => (
           <li
