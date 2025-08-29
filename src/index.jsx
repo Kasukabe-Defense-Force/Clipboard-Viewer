@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './app.jsx';
 import { Global, css } from '@emotion/react';
+import { ChakraProvider } from '@chakra-ui/react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -12,11 +13,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           padding: 0;
           box-sizing: border-box;
         }
+
         body {
           font-family: Arial, sans-serif;
         }
       `}
     />
-    <App />
+    <ChakraProvider>
+      <App />
+    </ChakraProvider>
   </React.StrictMode>
 );
