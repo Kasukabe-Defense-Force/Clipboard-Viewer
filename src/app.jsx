@@ -2,6 +2,8 @@ import { useEffect, useState, useMemo } from 'react';
 import styled from '@emotion/styled';
 import { InputSearch } from './component/input-search/input-search';
 import { StatusTab } from './component/status-tab/status-tab';
+import { ClipBoardItem } from './component/clip-board-item/clip-board-item';
+import { css } from '@emotion/react';
 
 const Container = styled.div`
   width: 400px;
@@ -64,22 +66,20 @@ export default function App() {
     >
       <StatusTab />
       <InputSearch value={value} setValue={setValue} />
-      <ul>
+      <ul
+        style={css`
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        `}
+      >
         {filteredList.map((item, idx) => (
-          <li
+          <ClipBoardItem
             key={idx}
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              marginBottom: '4px',
-            }}
-          >
-            <span>{item}</span>
-            <div>
-              <button onClick={() => handleCopy(item)}>복사</button>
-              <button onClick={() => handleDelete(item)}>삭제</button>
-            </div>
-          </li>
+            text={item}
+            handleCopy={handleCopy}
+            handleDelete={handleDelete}
+          />
         ))}
       </ul>
     </Container>
