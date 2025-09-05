@@ -1,5 +1,25 @@
-<img width="120" height="auto" alt="4008B333-B7ED-46C2-9469-74E9495B622A" src="https://github.com/user-attachments/assets/2779970e-f848-45c1-946b-0d0c05906c65" />
+# 📋 Clipboard Viewer
 
-### ClipList 클립보드 히스토리 웹 확장 프로그램
-> ClipList는 사용자가 복사한 텍스트를 기록하고 관리할 수 있는 웹 확장 프로그램 입니다.
+A Chrome extension to save, search, and manage your clipboard history with ease.  
+Supports **bookmarks**, **search**, and **Dark Mode** for a better user experience.
 
+---
+
+## ✨ Features
+- **Clipboard History**: Automatically saves copied text up to the latest 50 entries.
+- **Search Function**: Quickly find past clipboard entries through a built-in search bar.
+- **Bookmarks**: Mark important entries as favorites. In "All" view, bookmarks are always on top, and in "Bookmark" view, only saved items are displayed.
+- **Quick Actions**: Copy or delete any entry with a single click.
+- **Dark Mode**: Switch seamlessly between light and dark mode for your comfort.
+- **Local Storage**: All data is stored locally using Chrome storage — nothing is sent externally.
+
+---
+
+## 🔒 Privacy Policy
+- Clipboard Viewer does not collect, transmit, or share any personal data.
+- All copied text and settings are stored locally on the user’s device using Chrome storage.
+- Users can delete any saved entry at any time within the extension.
+
+
+## 👤 Author
+- wihyanghoon
